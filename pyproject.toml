@@ -12,3 +12,15 @@ authors = [{ name = "Manjunath Puttaswamy", email = "Manju_86@Outlook.com" }]
 dependencies = [
     "fastapi>=0.116.1",
 ]
+
+[tool.setuptools]
+# Treat ONLY these as packages (adjust if you have more)
+packages = ["prod_assistant"]
+
+# Optional dependency groups (install with: uv pip install .[dev])
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+  "mypy",
+]
