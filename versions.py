@@ -3,7 +3,8 @@ packages = [
     "langchain",
     "python-dotenv",
     "langchain-core",
-    "streamlit"
+    "streamlit",
+    "ipykernel"
 ]
 for pkg in packages:
     try:
