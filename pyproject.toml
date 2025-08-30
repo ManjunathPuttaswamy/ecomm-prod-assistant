@@ -1,9 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "ecomm-prod-assistant"
 version = "0.1.0"
-description = "Add your description here"
+description = "E-commerce productivity assistant with scraping and automation."
 readme = "README.md"
 requires-python = ">=3.10"
+authors = [{ name = "Manjunath Puttaswamy", email = "Manju_86@Outlook.com" }]
 dependencies = [
     "fastapi>=0.116.1",
 ]
