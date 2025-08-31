@@ -1,9 +1,22 @@
 import importlib.metadata
 packages = [
+    "beautifulsoup4",
+    "fastapi",
+    "html5lib",
+    "jinja2",
     "langchain",
-    "python-dotenv",
+    "langchain-astradb",
     "langchain-core",
+    "langchain-google-genai",
+    "langchain-groq",
+    "lxml",
+    "python-dotenv",
+    "python-multipart",
+    "selenium",
     "streamlit",
+    "undetected-chromedriver",
+    "uvicorn",
+    "structlog",
     "ipykernel"
 ]
 for pkg in packages:

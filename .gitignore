@@ -9,3 +9,34 @@ wheels/
 
 # Virtual environments
 .venv
+ecomm-prod/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+# Virtual environment
+env/
+venv/
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# Environment files
+.env
+*.env
+
+# Logs
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+archive/
