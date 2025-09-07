@@ -24,3 +24,11 @@ dev = [
   "ruff",
   "mypy",
 ]
+
+# Optional: CLI command (python -m pip install -e . ke baad yeh create hoga)
+[project.scripts]
+ecomm-assistant = "ecomm_prod_assistant.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["prod_assistant"]
+include = ["ecomm_prod_assistant*"]
