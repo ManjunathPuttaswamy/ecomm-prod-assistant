@@ -17,13 +17,15 @@ packages = [
     "undetected-chromedriver",
     "uvicorn",
     "structlog",
-    "ipykernel"
+    "ipykernel",
+    "langgraph"
 ]
 for pkg in packages:
     try:
         version = importlib.metadata.version(pkg)
         print(f"{pkg}=={version}")
     except importlib.metadata.PackageNotFoundError:
+        
         print(f"{pkg} (not installed)")
 
 # # serve static & templates
