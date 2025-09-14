@@ -9,26 +9,23 @@ description = "E-commerce productivity assistant with scraping and automation."
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "Manjunath Puttaswamy", email = "Manju_86@Outlook.com" }]
+license = { text = "Proprietary" }
 dependencies = [
     "fastapi>=0.116.1",
+    "langchain==0.3.27",
+    # TIP: 'langchain-core' ko alag pin na karo; 'langchain' sahi version le aayega.
+    # Agar zaroori ho, to compatible pair hi pin karo.
+    "python-dotenv==1.1.1",
+    "streamlit==1.49.1",
 ]
 
 [tool.setuptools]
 # Treat ONLY these as packages (adjust if you have more)
 packages = ["prod_assistant"]
 
-# Optional dependency groups (install with: uv pip install .[dev])
 [project.optional-dependencies]
-dev = [
-  "pytest",
-  "ruff",
-  "mypy",
-]
+dev = ["pytest", "ruff", "mypy"]
 
-# Optional: CLI command (python -m pip install -e . ke baad yeh create hoga)
 [project.scripts]
-ecomm-assistant = "ecomm_prod_assistant.cli:main"
-
-[tool.setuptools.packages.find]
-where = ["prod_assistant"]
-include = ["ecomm_prod_assistant*"]
+# Point to cli.py inside prod_assistant/
+ecomm-assistant = "prod_assistant.cli:main"

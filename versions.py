@@ -18,7 +18,8 @@ packages = [
     "uvicorn",
     "structlog",
     "ipykernel",
-    "langgraph"
+    "langgraph",
+    "ragas"
 ]
 for pkg in packages:
     try:
