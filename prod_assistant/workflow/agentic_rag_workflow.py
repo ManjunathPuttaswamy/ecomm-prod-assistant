@@ -139,7 +139,7 @@ class AgenticRAG:
 
 if __name__ == "__main__":
     rag_agent = AgenticRAG()
-    answer = rag_agent.run("What is the price of iPhone 16 pro max ?")
+    answer = rag_agent.run("iphone 16 plus, iphone 16, iphone 15 are best phones under 1,50,000 INR?")
     print("\nFinal Answer:\n", answer)
     
 # class AgenticRAG:
