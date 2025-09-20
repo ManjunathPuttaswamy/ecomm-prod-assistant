@@ -19,7 +19,9 @@ packages = [
     "structlog",
     "ipykernel",
     "langgraph",
-    "ragas"
+    "ragas",
+    "langchain-mcp-adapters",
+    "mcp"
 ]
 for pkg in packages:
     try:
