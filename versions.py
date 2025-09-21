@@ -21,7 +21,8 @@ packages = [
     "langgraph",
     "ragas",
     "langchain-mcp-adapters",
-    "mcp"
+    "mcp",
+    "duckduckgo-search"
 ]
 for pkg in packages:
     try:
