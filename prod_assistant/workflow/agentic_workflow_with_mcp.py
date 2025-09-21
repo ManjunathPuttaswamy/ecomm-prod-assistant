@@ -150,5 +150,5 @@ class AgenticRAG:
     
 if __name__ == "__main__":
     rag_agent = AgenticRAG()
-    answer = rag_agent.run("What is the price of iPhone 15?")
+    answer = rag_agent.run("What is the price of iPhone 16?")
     print("\nFinal Answer:\n", answer)
