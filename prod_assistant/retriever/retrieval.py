@@ -121,16 +121,13 @@ if __name__=='__main__':
     print("Context Precision Score:", context_score)
     print("Response Relevancy Score:", relevancy_score)
     
-
-    
-    
     
     # for idx, doc in enumerate(results, 1):
     #     print(f"Result {idx}: {doc.page_content}\nMetadata: {doc.metadata}\n")
 
-# # Add the project root to the Python path for direct script execution
-# #project_root = Path(__file__).resolve().parents[2]
-# #sys.path.insert(0, str(project_root))
+# Add the project root to the Python path for direct script execution
+#project_root = Path(__file__).resolve().parents[2]
+#sys.path.insert(0, str(project_root))
 
 # class Retriever:
 #     def __init__(self):

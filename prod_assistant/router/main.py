@@ -5,7 +5,8 @@ from fastapi.templating import Jinja2Templates
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from prod_assistant.workflow.agentic_rag_workflow import AgenticRAG
+#from prod_assistant.workflow.agentic_rag_workflow import AgenticRAG
+from prod_assistant.workflow.agentic_workflow_with_mcp_websearch import AgenticRAG
 
 app = FastAPI()
 
@@ -33,19 +34,34 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ---------- Routes ----------
+# ---------- FastAPI Endpoints ----------
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
     return templates.TemplateResponse("chat.html", {"request": request})
 
-@app.get("/healthz")
-def healthz():
-    return {"ok": True}
 
 @app.post("/get", response_class=HTMLResponse)
 async def chat(msg: str = Form(...)):
+    """Call the Agentic RAG workflow."""
     rag_agent = AgenticRAG()
-    return rag_agent.run(msg)
+    answer = rag_agent.run(msg)   # run() already returns final answer string
+    print(f"Agentic Response: {answer}")
+    return answer
+
+
+# # ---------- Routes ----------
+# @app.get("/", response_class=HTMLResponse)
+# async def index(request: Request):
+#     return templates.TemplateResponse("chat.html", {"request": request})
+
+# @app.get("/healthz")
+# def healthz():
+#     return {"ok": True}
+
+# @app.post("/get", response_class=HTMLResponse)
+# async def chat(msg: str = Form(...)):
+#     rag_agent = AgenticRAG()
+#     return rag_agent.run(msg)
 
 # if __name__ == "__main__":
 #     import uvicorn

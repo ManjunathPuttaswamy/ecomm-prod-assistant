@@ -22,7 +22,8 @@ packages = [
     "ragas",
     "langchain-mcp-adapters",
     "mcp",
-    "duckduckgo-search"
+    "duckduckgo-search",
+    "langchain-openai"
 ]
 for pkg in packages:
     try:
