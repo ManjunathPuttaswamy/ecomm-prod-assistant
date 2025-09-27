@@ -1,11 +1,37 @@
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.Python
-env/
+*.pdb
+*.egg-info/
+*.eggs/
+*.manifest
+*.spec
+
+# Virtual environments
 venv/
-.git
-.gitignore
-*.log
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints
+notebook/.ipynb_checkpoints
+
+# Logs & temp
 logs/
+*.log
+*.out
+*.tmp
+*.bak
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Build / Dist
+build/
+dist/
+*.egg-info/
+.eggs/
